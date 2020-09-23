@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
+    "removeComments": true,
+    "declaration": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "exclude": [
+    "**/**/*.spec.ts",
+    "dist/",
+    "dist-es2015/"
+  ],
+  "typedocOptions": {
+    "name": "ORXe Web Components",
+    "out": "docs",
+    "mode": "module",
+    "excludeNotDocumented": "true",
+    "readme": "./README.md",
+    "includes": [
+      "packages/"
+    ],
+    "exclude": [
+      "**/**/node_modules/**",
+      "**/**/coverage/**",
+      "**/**/**/_test_/**",
+      "**/*+(.d|-css|constants|interface|types).ts",
+      "**/**/typings/**",
+      "**/utils/**",
+      "**/theme/**",
+      "**/icons/**"
+    ]
+  }
+}

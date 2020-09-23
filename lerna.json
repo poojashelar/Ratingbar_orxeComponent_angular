@@ -1,0 +1,18 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+ 
+  "version": "independent",
+  "command": {
+    "add": {
+      "ignore": [
+        "@orxe/*" ]
+    },
+    "bootstrap": {
+      "nohoist": [
+        "@orxe-devkit/sass-to-ts"
+      ]
+    }
+  }
+}

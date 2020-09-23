@@ -8,7 +8,7 @@ export default class OrxeRatingBar extends LitElement {
    */
 
   @property({ type: String, reflect: true, attribute: 'type' })
-  type = '';
+  type = 'linear';
   @property({ type: String, reflect: true, attribute: 'rating' })
   rating = '0';
   @property({ type: String, reflect: true, attribute: 'label' })

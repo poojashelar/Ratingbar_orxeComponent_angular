@@ -1,6 +1,5 @@
 import { OrxeRatingBar } from '../';
 
-
 describe('orxe-rating-bar', () => {
   let ratingbar;
 
@@ -17,54 +16,54 @@ describe('orxe-rating-bar', () => {
     expect(ratingbar.render()).toBeTruthy();
   });
 
-  it('should function getRating returns rating in scale of 10', () => {
+  it('should function _getRating returns rating in scale of 10', () => {
     ratingbar.rating = 60;
-    expect(ratingbar.getRating()).toBe(6);
+    expect(ratingbar._getRating()).toBe(6);
   });
 
-  it('should function getRotationClass returns rotation class', () => {
+  it('should function _getRotationClass returns rotation class', () => {
     ratingbar.rating = 60;
-    expect(ratingbar.getRotationClass()).toBe('p60');
+    expect(ratingbar._getRotationClass()).toBe('p60');
   });
 
-  it('should function getLinearIndicatorColor returns rating color class', () => {
+  it('should function _getLinearIndicatorColor returns rating color class', () => {
     ratingbar.rating = 20;
-    expect(ratingbar.getLinearIndicatorColor()).toBe('rating-bad');
+    expect(ratingbar._getLinearIndicatorColor()).toBe('rating-bad');
     ratingbar.rating = 40;
-    expect(ratingbar.getLinearIndicatorColor()).toBe('rating-poor');
+    expect(ratingbar._getLinearIndicatorColor()).toBe('rating-poor');
     ratingbar.rating = 60;
-    expect(ratingbar.getLinearIndicatorColor()).toBe('rating-average');
+    expect(ratingbar._getLinearIndicatorColor()).toBe('rating-average');
     ratingbar.rating = 78;
-    expect(ratingbar.getLinearIndicatorColor()).toBe('rating-great');
+    expect(ratingbar._getLinearIndicatorColor()).toBe('rating-great');
     ratingbar.rating = 88;
-    expect(ratingbar.getLinearIndicatorColor()).toBe('rating-excellent');
+    expect(ratingbar._getLinearIndicatorColor()).toBe('rating-excellent');
   });
 
-  it('should function getIndicatorClass returns rating class', () => {
+  it('should function _getIndicatorClass returns rating class', () => {
     ratingbar.rating = 20;
-    expect(ratingbar.getIndicatorClass()).toBe('Bad');
+    expect(ratingbar._getIndicatorClass()).toBe('Bad');
     ratingbar.rating = 40;
-    expect(ratingbar.getIndicatorClass()).toBe('Poor');
+    expect(ratingbar._getIndicatorClass()).toBe('Poor');
     ratingbar.rating = 60;
-    expect(ratingbar.getIndicatorClass()).toBe('Average');
+    expect(ratingbar._getIndicatorClass()).toBe('Average');
     ratingbar.rating = 78;
-    expect(ratingbar.getIndicatorClass()).toBe('Great');
+    expect(ratingbar._getIndicatorClass()).toBe('Great');
     ratingbar.rating = 88;
-    expect(ratingbar.getIndicatorClass()).toBe('Excellent');
+    expect(ratingbar._getIndicatorClass()).toBe('Excellent');
   });
 
   it('should check default value for properties for Rating bar', () => {
     expect(ratingbar.type).toEqual('linear');
-    expect(ratingbar.rating).toEqual('0');
+    expect(ratingbar.rating).toEqual(0);
   });
 
-  it('should function isOver50 returns true when rating is > 50', () => {
+  it('should function _isOver50 returns true when rating is > 50', () => {
     ratingbar.rating = 60;
-    expect(ratingbar.isOver50()).toBeTruthy();
+    expect(ratingbar._isOver50()).toBeTruthy();
   });
 
-  it('should function isOver50 returns false when rating is < 50', () => {
+  it('should function _isOver50 returns false when rating is < 50', () => {
     ratingbar.rating = 30;
-    expect(ratingbar.isOver50()).toBeFalsy();
+    expect(ratingbar._isOver50()).toBeFalsy();
   });
 });
